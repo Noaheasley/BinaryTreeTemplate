@@ -154,14 +154,25 @@ bool BinaryTree::findNode(int searchValue, TreeNode*& nodeFound, TreeNode*& node
 	TreeNode*& iterParent = nodeParent;
 
 	//Loop while the current node iterator isn't nullptr/
-	if ()
+	if (iter != nullptr)
 	{
 		//Check if the search value is the same as the current nodes data.
+		if (searchValue == iter->getData())
+		{
 			//Set the node found argument to be the current node and the parent node to be the parent node iterator.
+			nodeFound = iter;
+			nodeParent = iterParent;
 			//Return true.
+			return true;
+		}
 		//Check if the search value is greater than the value at the current node.
+		if (searchValue > iter->getData())
+		{
 			//Set the parent node to be the current node.
+			nodeParent = iter;
 			//Set the current node to be the child to the right of the current node.
+			
+		}
 		//Check if the search value is less than the value at the current node.
 			//Set the parent node to be the current node.
 			//Set the current node to be its left child.
